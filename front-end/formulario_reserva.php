@@ -2,17 +2,42 @@
 
 <h2 class="h2titulo">RESERVA TEST</h2>
 
-<form method="POST" action="./cadastro_livro">
+        <form method="POST" action="reserva"> 
+              <div class="input-data">
+                 <input type="date" required name="data_reserva">
+                 <div class="underline"></div>
+                 <label for="" style="margin-bottom: 20px;">Data reserva</label>
+              </div>
+            </div>
+            
+           <div class="form-row">
+           <div class="input-data">
+                 <input type="text" required name="edicao">
+                 <div class="underline"></div>
+                 <label for="">Edição</label>
+              </div>
+              <div class="input-data">
+                 <input type="date" required name="data_entrega">
+                 <div class="underline"></div>
+                 <label for="" style="margin-bottom: 20px;">Data entrega</label>
+              </div>
+           </div>
 
-  <div class="mb-3">
-    
-    <input type="text" required="required"  name="titulo" placeholder="Titulo">
-    
-  </div>
+           <div class="form-row">
+           <div class="input-data">
+                 <input type="text" required name="cliente_reserva">
+                 <div class="underline"></div>
+                 <label for="">Cliente</label>
+              </div>           
 
-  <button type="submit" value="cadastro" name="cadastro">Cadastrar</button>
-
-</form>
-
-</div>
+                 <div class="form-row submit-btn">
+                    <div class="input-data">
+                       <div class="inner"></div>
+                       <input type="submit" value="Reserva" name="reserva">
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </form>
+     </div>
 

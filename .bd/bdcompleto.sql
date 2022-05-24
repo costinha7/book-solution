@@ -119,7 +119,9 @@ genero_id_livro int not null primary key auto_increment
 create table reserva(
 id_reserva int not null primary key auto_increment,
 data_reserva date,
-prazo_reserva date  
+data_entrega date,
+cliente_reserva varchar(45) not null,
+status_reserva enum('d','i')
 );
 
 
