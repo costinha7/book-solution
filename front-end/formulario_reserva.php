@@ -8,8 +8,7 @@
                  <div class="underline"></div>
                  <label for="" style="margin-bottom: 20px;">Data reserva</label>
               </div>
-            </div>
-            
+
            <div class="form-row">
            <div class="input-data">
                  <input type="text" required name="edicao">
@@ -21,7 +20,6 @@
                  <div class="underline"></div>
                  <label for="" style="margin-bottom: 20px;">Data entrega</label>
               </div>
-           </div>
 
            <div class="form-row">
            <div class="input-data">
@@ -34,7 +32,6 @@
                     <div class="input-data">
                        <div class="inner"></div>
                        <input type="submit" value="Reserva" name="reserva">
-                    </div>
                  </div>
               </div>
            </div>
