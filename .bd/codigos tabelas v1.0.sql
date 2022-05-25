@@ -68,7 +68,6 @@ idioma varchar(30) not null,
 volume int, 
 edicao int,
 data_registro date not null,
-paginas int, 
 descricao text,
 status enum('d','i') not null
 );

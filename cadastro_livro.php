@@ -29,7 +29,7 @@ if (isset($dadoslivro['cadastro'])) {
     //editora
     $editora = $dadoslivro['nome_editora'];
 
-    if($livro = cadastroLivro($conn,$titulo,$codigo,$datapublicacao,$idioma,$volume,$edicao,$dataregistro,$paginas,$descricao,$autor,$genero,$editora)){
+    if($livro = cadastroLivro($conn,$titulo,$codigo,$datapublicacao,$idioma,$volume,$edicao,$dataregistro,$descricao,$autor,$genero,$editora)){
 
             $_POST['msg'] = "<p style='color: red'>NAO CADASTRADO</p>";
             
@@ -45,13 +45,13 @@ if(isset($_POST['msg'])){
     unset($_POST['msg']);
 }
 
-function cadastroLivro($conn,$titulo,$codigo,$datapublicacao,$idioma,$volume,$edicao,$dataregistro,$paginas,$descricao,$autor,$genero,$editora)
+function cadastroLivro($conn,$titulo,$codigo,$datapublicacao,$idioma,$volume,$edicao,$dataregistro,$descricao,$autor,$genero,$editora)
 {
     try {
         $sql  = "SET AUTOCOMMIT=0;
         START TRANSACTION;
-        INSERT INTO livro (titulo,codigo,data_publicacao,idioma,volume,edicao,data_registro,paginas,descricao) VALUES 
-        (:titulo,:codigo,:data_publicacao,:idioma,:volume,:edicao,:data_registro,:paginas,:descricao);
+        INSERT INTO livro (titulo,codigo,data_publicacao,idioma,volume,edicao,data_registro,descricao) VALUES 
+        (:titulo,:codigo,:data_publicacao,:idioma,:volume,:edicao,:data_registro,:descricao);
         INSERT INTO autor(nome_autor) VALUES (:nome_autor);
         INSERT INTO genero(tipo_genero) VALUES (:tipo_genero);
         INSERT INTO editora(nome_editora) VALUES (:nome_editora);
@@ -66,7 +66,6 @@ function cadastroLivro($conn,$titulo,$codigo,$datapublicacao,$idioma,$volume,$ed
         $stmt->bindValue(':volume', $volume);
         $stmt->bindValue(':edicao', $edicao);
         $stmt->bindParam(':data_registro', $dataregistro);
-        $stmt->bindValue(':paginas', $paginas);
         $stmt->bindParam(':descricao', $descricao);
         $stmt->bindParam(':nome_autor', $autor);
         $stmt->bindParam(':tipo_genero', $genero);

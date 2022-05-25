@@ -2,7 +2,7 @@
 
 
 
-<h1 class="h1titulo">Livros Cadastrados</h1>
+<!--<h1 class="h1titulo">Livros Cadastrados</h1>-->
 
 <form action="livros.php" method="GET">
 
@@ -17,7 +17,7 @@
 
 include_once "./conexao.php";
 
-$query_livro = "SELECT codigo, titulo, data_publicacao, idioma, volume, edicao, data_registro, paginas, status_livro FROM livro";
+$query_livro = "SELECT codigo, titulo, data_publicacao, idioma, volume, edicao, data_registro, status_livro FROM livro";
 $result_livro = $conn->prepare($query_livro);
 $result_livro->execute();
 
@@ -47,5 +47,16 @@ if(($result_livro) AND ($result_livro->rowCount() != 0)){
 
 ?>
 
+</div>
+</form>
+<div class="container">
+<div class="text">Cadastro de Livro</div>
+
+<form method="POST" action="cadastro_livro">
+<div class="form-row submit-btn">
+         <div class="input-data">
+            <div class="inner"></div>
+            <input type="submit" value="Cadastro" name="cadastro">
+         </div>
 </div>
 </form>
