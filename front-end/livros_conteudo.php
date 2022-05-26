@@ -1,15 +1,8 @@
 
-
-
-
 <!--<h1 class="h1titulo">Livros Cadastrados</h1>-->
 
 <form action="livros.php" method="GET">
 
- <div class="card-group">
-
-  
- </div>
 </form>
 <li><a id="a01" href="cadastro_livro">Cadastro de Livro</a></li>
 
@@ -50,7 +43,7 @@ if(($result_livro) AND ($result_livro->rowCount() != 0)){
 </div>
 </form>
 <div class="container">
-<div class="text">Cadastro de Livro</div>
+<div class="text">Consulta de Livro</div>
 
 <form method="POST" action="cadastro_livro">
 <div class="form-row submit-btn">
