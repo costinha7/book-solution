@@ -11,9 +11,9 @@
             <label for="" style="margin-bottom: 20px;">Data reserva</label>
          </div>
          <div class="input-data">
-            <input type="text" required name="edicao">
+            <input type="text" required name="codigo">
             <div class="underline"></div>
-            <label for="">Edição</label>
+            <label for="">Código</label>
          </div>
       </div>
 

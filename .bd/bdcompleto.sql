@@ -79,7 +79,7 @@ status_livro enum('d','i')
 
 create table autor(
 id_autor int not null primary key auto_increment, 
-nome_autor varchar(50) not null
+nome_autor varchar(50)
 );
 
 
@@ -105,7 +105,7 @@ editora_id_livro int not null primary key auto_increment
 
 create table genero( 
 id_genero int not null primary key auto_increment, 
-tipo_genero varchar(30) not null  
+tipo_genero varchar(30)  
 );
 
 

@@ -1,12 +1,22 @@
 
 <!--<h1 class="h1titulo">Livros Cadastrados</h1>-->
 
-<form action="livros.php" method="GET">
 
+
+
+
+</div>
 </form>
-<li><a id="a01" href="cadastro_livro">Cadastro de Livro</a></li>
+<div class="container">
+<div class="text">Consulta de Livro</div>
 
-<?php
+<form method="POST" action="cadastro_livro">
+<div class="form-row submit-btn">
+         <div class="input-data">
+            <div class="inner"></div>
+            <input type="submit" value="Cadastro" name="cadastro">
+        </div>
+        <?php
 
 include_once "./conexao.php";
 
@@ -39,17 +49,5 @@ if(($result_livro) AND ($result_livro->rowCount() != 0)){
 
 
 ?>
-
-</div>
-</form>
-<div class="container">
-<div class="text">Consulta de Livro</div>
-
-<form method="POST" action="cadastro_livro">
-<div class="form-row submit-btn">
-         <div class="input-data">
-            <div class="inner"></div>
-            <input type="submit" value="Cadastro" name="cadastro">
-         </div>
 </div>
 </form>
