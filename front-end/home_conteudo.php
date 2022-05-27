@@ -15,8 +15,29 @@
         ["Element", "Density", {
           role: "style"
         }],
-        ["Livros Cadastrados", 12000, "red"],
-        ["Livros Alugados", 6000, "green"],
+        ["Livros Cadastrados", <?php 
+        
+include_once "./conexao.php";
+
+$query_livro = "SELECT COUNT(*) INTO id_livro FROM livro";
+$result_livro = $conn->prepare($query_livro);
+$result_livro->execute();
+
+if(($result_livro) AND ($result_livro->rowCount() != 0)){
+
+    while($row_livro = $result_livro->fetch(PDO::FETCH_ASSOC)){
+       //var_dump($row_livro);
+       extract ($row_livro);
+      
+       echo "$id_livro";
+    }
+
+}else{
+    echo "<p>Sem cadastros.</p>";
+}
+        
+        ?>, "red"],
+        ["Livros Alugados", <?php echo"1" ?>, "green"],
       ]);
 
       var view = new google.visualization.DataView(data);

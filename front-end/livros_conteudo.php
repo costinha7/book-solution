@@ -1,26 +1,12 @@
-
-<!--<h1 class="h1titulo">Livros Cadastrados</h1>-->
-
-
-
-
-
-</div>
-</form>
+<br>
 <div class="container">
-<div class="text">Consulta de Livro</div>
+<div class="text p-2">Consulta de Livro</div>
 
-<form method="POST" action="cadastro_livro">
-<div class="form-row submit-btn">
-         <div class="input-data">
-            <div class="inner"></div>
-            <input type="submit" value="Cadastro" name="cadastro">
-        </div>
-        <?php
+<?php
 
 include_once "./conexao.php";
 
-$query_livro = "SELECT codigo, titulo, data_publicacao, idioma, volume, edicao, data_registro, status_livro FROM livro";
+$query_livro = "SELECT codigo, titulo, data_publicacao, idioma, volume, edicao, data_registro FROM livro";
 $result_livro = $conn->prepare($query_livro);
 $result_livro->execute();
 
@@ -37,9 +23,8 @@ if(($result_livro) AND ($result_livro->rowCount() != 0)){
        echo "<div class='p-2'>Volume: $volume</div>";
        echo "<div class='p-2'>Edição: $edicao</div>";
        echo "<div class='p-2'>Data de Registro: $data_registro</div>";
-       echo "<div class='p-2'>status_livro: $status_livro</div>";
-       echo "<div class='p-2'><input type='submit' value='Deletar'></div>";
-       echo "<div class='p-2'><input type='submit' value='Atualizar'></div>";
+       //echo "<div class='p-2'>status_livro: $status_livro</div>";
+       //echo "<div class='p-2'><input type='submit' value='Deletar' name='delete'></div>";
        echo "</div>";
     }
 
@@ -47,7 +32,4 @@ if(($result_livro) AND ($result_livro->rowCount() != 0)){
     echo "<p>Sem cadastros.</p>";
 }
 
-
 ?>
-</div>
-</form>

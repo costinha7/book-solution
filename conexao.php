@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $user = "root";
-$pass = "root"; // @LARbook$1458$ // root
+$pass = "@LARbook$1458$"; // @LARbook$1458$ // root
 $dbname = "book_solution";
 
 try{

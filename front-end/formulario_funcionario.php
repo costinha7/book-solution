@@ -1,4 +1,3 @@
-<br>
     <div class="container">
         <div class="text">Cadastro de Funcionário</div>
 

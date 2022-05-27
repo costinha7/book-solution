@@ -1,4 +1,3 @@
-<br>
        <div class="container">
         <div class="text">Cadastro de Clientes</div>
         <form method="POST" action="./cadastro_usuario"> 
