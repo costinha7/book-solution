@@ -15,9 +15,9 @@
         ["Element", "Density", {
           role: "style"
         }],
-        ["Livros Cadastrados", <?php 
+        ["Livros Cadastrados", <?php echo "1"
         
-include_once "./conexao.php";
+/*include_once "./conexao.php";
 
 $query_livro = "SELECT COUNT(*) INTO id_livro FROM livro";
 $result_livro = $conn->prepare($query_livro);
@@ -36,7 +36,7 @@ if(($result_livro) AND ($result_livro->rowCount() != 0)){
     echo "<p>Sem cadastros.</p>";
 }
         
-        ?>, "red"],
+        */?>, "red"],
         ["Livros Alugados", <?php echo"1" ?>, "green"],
       ]);
 
