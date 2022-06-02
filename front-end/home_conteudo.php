@@ -15,29 +15,20 @@
         ["Element", "Density", {
           role: "style"
         }],
-        ["Livros Cadastrados", <?php echo "1"
-        
-/*include_once "./conexao.php";
+        ["Livros Cadastrados", "red"]
+        ["Livros Alugados", "green"]
 
-$query_livro = "SELECT COUNT(*) INTO id_livro FROM livro";
-$result_livro = $conn->prepare($query_livro);
-$result_livro->execute();
+        <?php
+        include 'conexao.php';
+        $sql = "SELECT * FROM livro";
+        $buscar = mysqli_query($conexao,$sql);
 
-if(($result_livro) AND ($result_livro->rowCount() != 0)){
-
-    while($row_livro = $result_livro->fetch(PDO::FETCH_ASSOC)){
-       //var_dump($row_livro);
-       extract ($row_livro);
-      
-       echo "$id_livro";
-    }
-
-}else{
-    echo "<p>Sem cadastros.</p>";
-}
-        
-        */?>, "red"],
-        ["Livros Alugados", <?php echo"1" ?>, "green"],
+        while($dados = mysqli_fetch_array($buscar)){
+          $livro = $dados['livro'];
+          $id_livro = $dados ['id_livro'];
+        ?>
+        ['<?php echo $livro?>', <?php echo $id_livro?>],
+     <?php } ?>
       ]);
 
       var view = new google.visualization.DataView(data);
